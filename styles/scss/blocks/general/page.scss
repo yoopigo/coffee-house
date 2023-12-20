@@ -1,0 +1,24 @@
+@import '../../common/variables.scss';
+
+.page__body {
+  background-color: $background-body;
+  margin: 0;
+}
+
+.page__wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 20px 40px 40px 40px;
+  scroll-behavior: smooth;
+
+  @media (max-width: $tablet-width) {
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 550px) {
+    padding: 20px 16px 40px 16px;
+  }
+}

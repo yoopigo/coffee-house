@@ -1,0 +1,116 @@
+@import '../../common/variables.scss';
+
+.offer {
+  background-position: -55px -30px;
+  border-radius: 40px;
+  padding: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 800px) {
+    padding: 100px 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -275px 0px;
+  }
+
+  @media (max-width: 550px) {
+    padding: 60px 16px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    background-position: -360px 0px;
+  }
+}
+
+.offer__video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offer__container {
+  width: 530px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 700px) {
+    width: auto;
+  }
+}
+
+.offer__container-title {
+  @include text-heading-1;
+  color: $text-light;
+
+  & span {
+    font-style: italic;
+    color: $text-accent;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 42px;
+    line-height: 115%;
+  }
+}
+
+.offer__container-text {
+  color: $text-light;
+  @include text-body-medium();
+
+  @media (max-width: 700px) {
+  }
+}
+
+.offer__container-button {
+  padding: 20px 78px;
+  @include center();
+  @include text-link-button();
+  background-color: $text-light;
+  color: $text-dark;
+  border-radius: 100px;
+  border: 0;
+  width: 200px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.8s ease-in-out;
+}
+
+.offer__container-button-text {
+  transition: transform 0.4s ease-in-out;
+
+  @media (any-pointer: coarse) {
+    transform: translateX(-12px);
+  }
+}
+
+.offer__container-button-img {
+  position: absolute;
+  right: 65px;
+  opacity: 1;
+  @media (hover: hover) {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.offer__container-button:hover .offer__container-button-img {
+  @media (hover: hover) {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+  }
+}
+
+.offer__container-button:hover .offer__container-button-text {
+  @media (hover: hover) {
+    transform: translateX(-12px);
+    transition: transform 0.4s ease-in-out;
+  }
+}

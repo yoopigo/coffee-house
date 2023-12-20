@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Coffee house</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../styles/css/style.css" />
+    <link rel="icon" href="../../favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="page__body">
+    <div class="page__wrapper">
+      <header class="header">
+        <a class="header__logo" href="../main/Index.html">
+          <img
+            class="header__logo-img"
+            src="../../assets/img/header/logo.png"
+            alt="Логотип"
+            width="100"
+            height="60"
+          />
+        </a>
+        <nav class="header__nav">
+          <ul class="header__nav-items">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="../main/Index.html#slider"
+                >Favorite coffee</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="../main/Index.html#about"
+                >About</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="../main/Index.html#mobile-app"
+                >Mobile app</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#footer">Contact us</a>
+            </li>
+          </ul>
+          <a class="header__nav-item header__menu header__menu-active" href="#">
+            <p>Menu</p>
+            <img
+              class="header__menu-icon-desc"
+              src="../../assets/img/header/coffee-cup.svg"
+              alt=""
+            />
+            <img
+              class="header__menu-icon-mobile"
+              src="../../assets/img/header/coffee-cup-m.svg"
+              alt=""
+            />
+          </a>
+        </nav>
+        <div class="header__burger">
+          <span class="header__burger-line header__burger-line--one"></span>
+          <span class="header__burger-line header__burger-line--two"></span>
+        </div>
+      </header>
+      <main>
+        <section class="menu-offer">
+          <h1 class="menu-offer__title">
+            Behind each of our cups hides an <span>amazing surprise</span>
+          </h1>
+          <div class="menu-offer__switches">
+            <button
+              class="menu-offer__switch menu-offer__switch--active menu-offer__switch--coffee"
+              disabled
+            >
+              <span class="menu-offer__switch-icon">
+                <img src="../../assets/img/menu-offer/coffee.svg" alt="#" />
+              </span>
+              <span class="menu-offer__switch-text">Coffee</span></button
+            ><button class="menu-offer__switch menu-offer__switch--tea">
+              <span class="menu-offer__switch-icon">
+                <img src="../../assets/img/menu-offer/tea.svg" alt="#" />
+              </span>
+              <span class="menu-offer__switch-text">Tea</span></button
+            ><button class="menu-offer__switch menu-offer__switch--dessert">
+              <span class="menu-offer__switch-icon">
+                <img src="../../assets/img/menu-offer/dessert.svg" alt="#" />
+              </span>
+              <span class="menu-offer__switch-text">Dessert</span>
+            </button>
+          </div>
+        </section>
+        <section class="catalog">
+          <ul class="catalog__items"></ul>
+          <div class="catalog__refresh">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+            >
+              <g
+                stroke="#403F3D"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21.89 13.5a10 10 0 1 1-.72-5.5" />
+                <path d="M17 8h4.4a.6.6 0 0 0 .6-.6V3" />
+              </g>
+            </svg>
+          </div>
+        </section>
+      </main>
+      <footer class="footer" id="footer">
+        <div class="footer__wrapper">
+          <h2 class="footer__title">
+            Sip, Savor, Smile. <span>It’s coffee time!</span>
+          </h2>
+          <div class="footer__icons">
+            <div class="footer__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+              >
+                <path
+                  stroke="#E1D4C9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M23 3.01s-2.02 1.2-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.28-.03-.56-.08-.83 1.02-1 2.08-3.67 2.08-3.67Z"
+                />
+              </svg>
+            </div>
+            <div class="footer__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+              >
+                <g stroke="#E1D4C9">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+                  />
+                  <path
+                    d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m17.5 6.51.01-.01"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="footer__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+              >
+                <path
+                  stroke="#E1D4C9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="footer__contacts">
+            <p class="footer__contacts-title">Contact us</p>
+            <div class="footer__contacts-blocks">
+              <div class="footer__contacts-block-wrapper">
+                <a
+                  class="footer__contacts-block footer__contacts-block-address"
+                  target="_blank"
+                  href="https://maps.app.goo.gl/eMZJ6Va7jW9dPyHc7"
+                >
+                  <img
+                    src="../../assets/img/footer/pin-alt.svg"
+                    alt="#"
+                    class="footer__contacts-block-img"
+                  />
+                  8558 Green Rd., LA</a
+                >
+              </div>
+              <div class="footer__contacts-block-wrapper">
+                <a
+                  class="footer__contacts-block footer__contacts-block-phone"
+                  href="tel:+16035550123"
+                >
+                  <img
+                    src="../../assets/img/footer/phone.svg"
+                    alt="#"
+                    class="footer__contacts-block-img"
+                  />
+                  +1 (603) 555-0123</a
+                >
+              </div>
+              <div>
+                <img
+                  src="../../assets/img/footer/clock.svg"
+                  alt="#"
+                  class="footer__contacts-block-img"
+                />
+                <a class="footer__contacts-block footer__contacts-block-time"
+                  >Mon-Sat: 9:00 AM – 23:00 PM</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div id="overlay"></div>
+
+    <script src="../../scripts/menu/scripts.js"></script>
+    <script src="../../assets/products/products.json"></script>
+  </body>
+</html>

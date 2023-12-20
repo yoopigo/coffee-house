@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "description": "Coffee house",
+  "scripts": {
+    "sass": "node-sass styles/scss/style.scss -o styles/css --watch"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "sass": "^1.69.4"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

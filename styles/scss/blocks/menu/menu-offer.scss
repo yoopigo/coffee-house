@@ -1,0 +1,81 @@
+@import '../../common/variables.scss';
+
+.menu-offer {
+  display: grid;
+  justify-content: center;
+  row-gap: 40px;
+  margin-bottom: 33px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
+}
+
+.menu-offer__title {
+  @include text-heading-2();
+  max-width: 800px;
+  color: $text-dark;
+  text-align: center;
+
+  & span {
+    color: $text-accent;
+  }
+
+  @media (max-width: 500px) {
+    @include text-burger-link();
+  }
+}
+
+.menu-offer__switches {
+  justify-self: center;
+  display: flex;
+  gap: 16px;
+
+  @media (max-width: 500px) {
+    gap: 6px;
+  }
+}
+
+.menu-offer__switch {
+  display: flex;
+  padding: 8px 16px 8px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid $border-light;
+  border-radius: 100px;
+  background-color: $background-body;
+  @include text-link-button();
+  color: $text-dark;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  @media (hover: hover) {
+    &:hover,
+    &:active {
+      color: $border-light;
+      background-color: $background-container;
+    }
+  }
+}
+
+.menu-offer__switch--active {
+  color: $border-light;
+  background-color: $background-container;
+  cursor: default;
+}
+
+.menu-offer__switch-icon {
+  display: flex;
+  padding: 7px 7px;
+  justify-content: center;
+  align-items: center;
+  background-color: $border-light;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid $border-light;
+
+  @media (max-width: $tablet-width) {
+    padding: 5px 5px;
+  }
+}

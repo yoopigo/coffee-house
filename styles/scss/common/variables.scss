@@ -1,0 +1,122 @@
+//Size
+
+$desktop-width: 1440px;
+$tablet-width: 768px;
+$mobile-width-only: 380px;
+
+//Color
+
+$text-dark: #403f3d;
+$text-light: #e1d4c9;
+$text-accent: #b0907a;
+$background-body: #e1d4c9;
+$background-container: #665f55;
+$background-backdrop: #2d2d2d;
+$border-light: #c1b6ad;
+$border-dark: #665f55;
+
+//Typography
+
+@mixin text-heading-1($font-style: normal) {
+  font-size: 72px;
+  font-style: $font-style;
+  font-weight: 600;
+  line-height: 105%;
+}
+
+@mixin text-heading-2($font-style: normal) {
+  font-size: 60px;
+  font-style: $font-style;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+@mixin text-body-medium() {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+@mixin text-body-caption() {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+@mixin text-link-button() {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+@mixin text-burger-link() {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+//Typography mobile
+
+@mixin text-mobile-heading-1($font-style: normal) {
+  font-size: 14px;
+  font-style: $font-style;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@mixin text-mobile-heading-2($font-style: normal) {
+  font-size: 32px;
+  font-style: $font-style;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+//Other
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin line {
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: $text-dark;
+    transition-property: width, opacity;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-out;
+    opacity: 0;
+  }
+
+  &:hover:after,
+  &:focus:after {
+    opacity: 1;
+    width: 100%;
+    left: 50%;
+  }
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,138 @@
+@import '../../common/variables.scss';
+
+.slider {
+  position: relative;
+  margin-bottom: 145px;
+}
+
+.slider__title {
+  color: $text-dark;
+  @include text-heading-2;
+  text-align: center;
+  margin-bottom: 40px;
+
+  & span {
+    color: $text-accent;
+    font-style: italic;
+  }
+
+  @media (max-width: 500px) {
+    @include text-burger-link();
+  }
+}
+
+.slider__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slider__arrow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  @include center();
+  border-radius: 100px;
+  border: 1px solid $border-dark;
+  top: 291px;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $background-container;
+      color: $text-light;
+      transition: all 0.5s ease-in;
+    }
+  }
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+
+.slider__arrow--right {
+  right: 5px;
+  @media (max-width: $tablet-width) {
+    right: 1px;
+  }
+}
+
+.slider__arrow--left {
+  left: 5px;
+  @media (max-width: $tablet-width) {
+    left: 1px;
+  }
+}
+
+.slider__line {
+  max-width: 480px;
+  overflow: hidden;
+  display: flex;
+  cursor: pointer;
+
+  & img {
+    height: 480px;
+    width: 480px;
+
+    @media (max-width: 500px) {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.slider__slide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0 0 100%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.slider__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: $text-dark;
+}
+
+.slider__info-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.slider__info-text {
+  @include text-body-medium();
+  text-align: center;
+}
+
+.slider__info-price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.slider__dots {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  bottom: -46px;
+  left: 45%;
+}
+
+.slider__dot {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: $border-light;
+  cursor: pointer;
+  position: relative;
+}
+
+.slider__dot--active {
+  background-color: $border-light;
+}
